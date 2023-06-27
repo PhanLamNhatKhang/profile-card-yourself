@@ -19,9 +19,19 @@
         <div class="card__img">
             <img src="./avt-me.jpg" alt="avt.png">
         </div>
-        <a href="#" class="card__bars">
-            <i class="fa-solid fa-bars"></i>
-        </a>
+        <ul class="menu">
+            <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="icon">
+                <li style="--i:0;"><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
+                <li style="--i:1;"><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
+                <li style="--i:2;"><a href="#"><ion-icon name="settings-outline"></ion-icon></a></li>
+                <li style="--i:3;"><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+                <li style="--i:4;"><a href="#"><ion-icon name="videocam-outline"></ion-icon></a></li>
+                <li style="--i:5;"><a href="#"><ion-icon name="key-outline"></ion-icon></a></li>
+                <li style="--i:6;"><a href="#"><ion-icon name="game-controller-outline"></ion-icon></a></li>
+                <li style="--i:7;"><a href="#"><ion-icon name="camera-outline"></ion-icon></a></li>
+            </div>
+        </ul>
         <h2>Kane Phan</h2>
         <h4>Web Developer</h4>
         <p>Follow me, I will show you and experience the most beautiful and new things! </p>
@@ -56,5 +66,15 @@
             </div>
         </div>
     </div>
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.onclick = function() {
+            menu.classList.toggle('active')
+            menuToggle .classList.toggle('active')
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
